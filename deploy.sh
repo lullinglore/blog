@@ -1,6 +1,7 @@
 echo 'Cleaning and building "public" directory'
 hugo --cleanDestinationDir
 
+echo
 echo -n 'Enter commit name:'
 read cname
 echo
