@@ -1,0 +1,42 @@
+baseURL = "https://example.com/"
+languageCode = "en"
+
+title = "Purple Planetarium"
+author = "Lulullia"
+copyright = "Lulullia"
+
+paginate = 10
+theme = "tailwind"
+
+# MENU
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Blog"
+    pageRef = "/posts"
+    weight = 0
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 10
+
+
+# MODULE
+[module]
+
+  [[module.mounts]]
+      source = "content"
+      target = "content"
+  [[module.mounts]]
+      source = "D:/Files/!!NOTES!!/Chaotic Creativity/Moons/Blog"
+      target = "content"
+
+
+# TAXONOMIES
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
