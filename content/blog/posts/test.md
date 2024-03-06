@@ -1,7 +1,6 @@
 +++
 title = 'Test'
 date = 2024-03-05T18:57:49+01:00
-draft = true
 +++
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sed consectetur purus. Cras eros lacus, fermentum nec turpis nec, varius interdum velit. Praesent et ligula mi. Suspendisse eget sapien id neque scelerisque interdum. Nam ut felis sollicitudin, tempus eros sit amet, venenatis magna. Nunc faucibus leo quis porta elementum. Sed non scelerisque dui. Donec tempor, massa sit amet varius mattis, nisl magna varius leo, vel vestibulum magna diam non dolor. Curabitur porttitor posuere quam eget accumsan. Pellentesque id lacinia massa. Quisque ut facilisis augue, in rhoncus mauris. Pellentesque eleifend varius dignissim. In odio neque, porta quis nibh et, auctor vulputate eros.
