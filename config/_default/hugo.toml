@@ -1,12 +1,18 @@
 baseURL = "https://lulullia.github.io/"
-languageCode = "en"
+theme = "tailwind"
 
 title = "Purple Planetarium"
 author = "Lulullia"
 copyright = "Lulullia"
 
+languageCode = "en"
+#defaultContentLanguage = "en"
+#defaultContentLanguageInSubdir = true
+
+refLinksErrorLevel = "WARNING"
+refLinksNotFoundURL = '#'
+
 paginate = 10
-theme = "tailwind"
 
 # MENU
 [menu]

@@ -15,5 +15,5 @@ git push
 echo 'Pushing new changes to "blog"'
 cd ..
 git add .
-git commit -m "$cname"
+git commit -m "Deployed: $cname"
 git push

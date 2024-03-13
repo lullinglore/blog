@@ -1,0 +1,70 @@
+{{/*
+    Prints page content with two types of wikilinks rendered (with and without text).
+	
+	Based loosely on https://github.com/milafrerichs/hugo-wikilinks with these improvements:
+		- Renders shortcodes correctly
+		- Handles Links with text
+		- Uses safeHTML instead of markdownify (renders <code></code> blocks correctly)
+
+	Modified further by Lulullia to support:
+		- Auto formatting of anchors (from link#A heading to link#a-heading)
+		- Properly display links in the form of [[Link#Heading]]
+
+    @author @qcasey
+
+    @context Type Page (.)
+
+    @access public
+
+*/}}
+{{ $wikiregexWithText := "\\[\\[([^\\]\\|\\r\\n]+?)\\|([^\\]\\|\\r\\n]+?)\\]\\]" }}
+{{ $wikiregex := "\\[\\[([^\\]\\|\\r\\n]+?)\\]\\]" }}
+
+{{ $page := .Page }}
+{{ $pageContent := .Content }}
+
+{{/* Find all normal wikilinks and loop through them */}}
+{{ range ($wikilinks := .Content | findRE $wikiregex) }}
+	{{ $link := . | replaceRE $wikiregex "$1" }}
+	{{ $wikilink :=  printf "\\[\\[%s\\]\\]" $link }}
+	{{ $text := ($.Site.GetPage $link).Title }}
+
+	{{/* If contains an anchor, anchorize it and get display title */}}
+	{{ if (strings.Contains $link "#")}}
+		{{ $split := strings.Split $link "#" }}
+		{{ $anchor := index $split 1 | anchorize }}
+		{{ $link = printf "%s%s%s" (index $split 0) "#" $anchor }}
+
+		{{ $title := ($.Site.GetPage (index $split 0)).Title }}
+		{{ $text = printf "%s%s%s" $title "#" (index $split 1) }}
+	{{ end }}
+
+	{{/* Replace wikilinks with HTML links */}}
+	{{ with relref $page $link }}
+		{{ $link := printf "%s%s%s%s%s" "<a href=\"" . "\">" $text "</a>"  }}
+		{{ $pageContent = $pageContent | replaceRE $wikilink $link }}
+	{{ end }}
+{{ end }}
+
+
+{{/* Find all aliased wikilinks and loop through them */}}
+{{ range ($pageContent | findRE $wikiregexWithText) }}
+	{{ $link := . | replaceRE $wikiregexWithText "$1" }}
+	{{ $text := . | replaceRE $wikiregexWithText "$2" }}
+	{{ $wikilink :=  printf "\\[\\[%s\\|%s\\]\\]" $link $text }}
+
+	{{/* If contains an anchor, anchorize it */}}
+	{{ if (strings.Contains $link "#")}}
+		{{ $split := strings.Split $link "#" }}
+		{{ $anchor := index $split 1 | anchorize }}
+		{{ $link = printf "%s%s%s" (index $split 0) "#" $anchor }}
+	{{ end }}
+
+	{{/* Replace wikilinks with HTML links */}}
+	{{ with relref $page $link }}
+		{{ $link := printf "%s%s%s%s%s" "<a href=\"" . "\">" $text "</a>" }}
+		{{ $pageContent = $pageContent | replaceRE $wikilink $link }}
+	{{ end }}
+{{ end }}
+
+{{ $pageContent | safeHTML }}
