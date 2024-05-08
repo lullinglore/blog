@@ -1,76 +1,92 @@
-# SEO keywords and description for your site.
-#keywords = "hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
-subtitle = "Interactive stories"
+# STACK PARAMS #
+# WIDGETS
+[widgets]
 
-# dir name of your blog content (default is `content/posts`).
-# the list of set content will show up on your index page (baseurl).
-contentTypeName = "blog"
+  [[widgets.homepage]]
+    type = "search"
 
-# Show table of contents at the top of your posts (defaults to false)
-# Alternatively, add this param to post front matter for specific posts
-toc = true
+  [[widgets.homepage]]
+    type = "categories"
 
-showReadingTime = true
 
-[search]
-  summaryInclude = 180 # show only part of content in search result.
-  minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
-  threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
+  [[widgets.page]]
+    type = "toc"
 
-[header]
-  logo = "sitelogo.svg"
-  sticky = true
 
-[footer]
-  since = 2023
-  poweredby = true
+# TAILWIND PARAMS #
+# # SEO keywords and description for your site.
+# #keywords = "hugo, tailwind, tailwindcss, hugo theme, hugo theme tailwind"
+# subtitle = "Interactive stories"
 
-[taxonomies.icons]
-  categories = "category-2"
-  tags = "hash"
+# # dir name of your blog content (default is `content/posts`).
+# # the list of set content will show up on your index page (baseurl).
+# contentTypeName = "blog"
 
-# giscus is comments system powered by GitHub Discussions
-# generate configurations from https://giscus.app/
-# [giscus]
-#   enabled = false
-#   repo = "your-repo-name"
-#   repoID = "your-repo-id"
-#   category = "your-category"
-#   categoryID = "your-category-id"
-#   mapping = "pathname"
-#   strict = "0"
-#   reactionsEnabled = "1"
-#   emitMetadata = "0"
-#   inputPosition = "bottom"
-#   lang = "en"
+# # Show table of contents at the top of your posts (defaults to false)
+# # Alternatively, add this param to post front matter for specific posts
+# toc = true
 
-[social_media]
-  [[social_media.items]]
-    enabled = false
-    title = 'Facebook'
-    icon = 'brand-facebook'
-    link = 'https://www.facebook.com/'
+# showReadingTime = true
 
-  [[social_media.items]]
-    enabled = false
-    title = 'Twitter'
-    icon = 'brand-x'
-    link = 'https://twitter.com/__PurPleFoX__'
+# [search]
+#   summaryInclude = 180 # show only part of content in search result.
+#   minMatchCharLength = 2 # https://www.fusejs.io/api/options.html#minmatchcharlength
+#   threshold = 0.3 # https://www.fusejs.io/api/options.html#threshold
 
-  [[social_media.items]]
-    enabled = false
-    title = 'Instagram'
-    icon = 'brand-instagram'
-    link = 'https://www.instagram.com/'
+# [header]
+#   logo = "sitelogo.svg"
+#   sticky = true
 
-  [[social_media.items]]
-    enabled = false
-    title = 'LinkedIn'
-    icon = 'brand-linkedin'
-    link = 'https://www.linkedin.com/'
+# [footer]
+#   since = 2023
+#   poweredby = true
 
-  [[social_media.items]]
-    enabled = false
-    title = 'Github'
-    icon = 'brand-github'
-    link = 'https://github.com/tomowang'
+# [taxonomies.icons]
+#   categories = "category-2"
+#   tags = "hash"
+
+# # giscus is comments system powered by GitHub Discussions
+# # generate configurations from https://giscus.app/
+# # [giscus]
+# #   enabled = false
+# #   repo = "your-repo-name"
+# #   repoID = "your-repo-id"
+# #   category = "your-category"
+# #   categoryID = "your-category-id"
+# #   mapping = "pathname"
+# #   strict = "0"
+# #   reactionsEnabled = "1"
+# #   emitMetadata = "0"
+# #   inputPosition = "bottom"
+# #   lang = "en"
+
+# [social_media]
+#   [[social_media.items]]
+#     enabled = false
+#     title = 'Facebook'
+#     icon = 'brand-facebook'
+#     link = 'https://www.facebook.com/'
+
+#   [[social_media.items]]
+#     enabled = false
+#     title = 'Twitter'
+#     icon = 'brand-x'
+#     link = 'https://twitter.com/__PurPleFoX__'
+
+#   [[social_media.items]]
+#     enabled = false
+#     title = 'Instagram'
+#     icon = 'brand-instagram'
+#     link = 'https://www.instagram.com/'
+
+#   [[social_media.items]]
+#     enabled = false
+#     title = 'LinkedIn'
+#     icon = 'brand-linkedin'
+#     link = 'https://www.linkedin.com/'
+
+#   [[social_media.items]]
+#     enabled = false
+#     title = 'Github'
+#     icon = 'brand-github'
+#     link = 'https://github.com/tomowang'

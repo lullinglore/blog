@@ -1,5 +1,5 @@
 baseURL = "https://lulullia.github.io/"
-theme = "tailwind"
+theme = "hugo-theme-stack"
 
 title = "Purple Planetarium"
 author = "Lulullia"
@@ -10,7 +10,7 @@ languageCode = "en"
 #defaultContentLanguageInSubdir = true
 
 refLinksErrorLevel = "WARNING"
-refLinksNotFoundURL = '#'
+refLinksNotFoundURL = "#"
 
 paginate = 10
 
@@ -18,22 +18,68 @@ paginate = 10
 [menu]
 
   [[menu.main]]
-    identifier = "about"
     name = "About"
     pageRef = "/about"
     weight = 10
+    [[menu.main.params]]
+      icon = "user"
 
   [[menu.main]]
-    identifier = "projects"
+    name = "Purpleverse"
+    pageRef = "/world"
+    weight = 20
+    [[menu.main.params]]
+      icon = "infinity"
+
+  [[menu.main]]
     name = "Projects"
     pageRef = "/projects"
-    weight = 20
+    weight = 30
+    [[menu.main.params]]
+      icon = "hash"
 
   [[menu.main]]
-    identifier = "blog"
+    name = "Artblog"
+    pageRef = "/artblog"
+    weight = 35
+    [[menu.main.params]]
+      icon = "tag"
+
+  [[menu.main]]
     name = "Blog"
     pageRef = "/blog"
-    weight = 0
+    weight = 40
+    [[menu.main.params]]
+      icon = "archives"
+
+  [[menu.main]]
+    name = "Search"
+    pageRef = "/search"
+    weight = 50
+    [[menu.main.params]]
+      icon = "search"
+
+  # Social links
+  [[menu.social]]
+    identifier = "tumblr"
+    name = "Tumblr"
+    url = "https://youtube.com/@lulullia"
+    [[menu.social.params]]
+      icon = "link"
+  
+  [[menu.social]]
+    identifier = "gamejolt"
+    name = "Game Jolt"
+    url = "https://youtube.com/@lulullia"
+    [[menu.social.params]]
+      icon = "link"
+  
+  [[menu.social]]
+    identifier = "youtube"
+    name = "YouTube"
+    url = "https://youtube.com/@lulullia"
+    [[menu.social.params]]
+      icon = "link"
 
 
 # MODULE
@@ -46,9 +92,27 @@ paginate = 10
       source = "D:/Files/!!NOTES!!/Chaotic Creativity/Moons/Blog"
       target = "content"
 
+  [[module.mounts]]
+      source = "assets"
+      target = "assets"
+  [[module.mounts]]
+      source = "D:/Files/!!NOTES!!/Chaotic Creativity/Storehouse/att/img"
+      target = "assets/img"
+
+
+# PERMALINKS
+[permalinks]
+  page = "/:slug/"
+
+  blog = "/entry/:slug/"
+  artblog = "/entry/:slug/"
+
+  world = "/world/:slug/"
+  categories = "/world/:slug/"
+
 
 # TAXONOMIES
 [taxonomies]
   category = "categories"
-  tag = "tags"
-  series = "series"
+  project = "projects"
+  topic = "topics"
