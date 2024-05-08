@@ -1,0 +1,59 @@
+
+{{/* Get the image's URL.
+	 give a url like "image/img.png", returns a url.URL object which is a deconstructed url */}}
+{{- $u := urls.Parse .Destination -}}
+{{- $src := $u.String -}}
+
+{{/* Get the image resource, external or not.
+	 give a url like "image/img.png", returns a resource.Resource */}}
+{{- $image := .Page.Resources.GetMatch (printf "%s" ($src | safeURL)) -}}
+
+{{/* If the image is local, resolve its final url and get its resource.
+	 not absolute means it's relative like "image/img.png" */}}
+{{- if not $u.IsAbs -}}
+  {{/* u.Path is the part of the url after the domain name; "site.com/foo" > "/foo" */}}
+  {{- $image = or (.PageInner.Resources.Get $u.Path) (resources.Get $u.Path) -}}
+{{- end -}}
+
+
+{{/* Construct attributes. */}}
+{{- $alt := .PlainText | safeHTML -}}
+{{- $Width := 0 -}}
+{{- $Height := 0 -}}
+{{- $Srcset := "" -}}
+{{/* SVG and external images won't work with gallery layout, because their width and height attributes are unknown */}}
+{{- $galleryImage := false -}}
+
+{{- if $image -}}
+	{{- $notSVG := ne (path.Ext .Destination) ".svg" -}}
+	{{- $src = $image.RelPermalink -}}
+
+	{{- if $notSVG -}}
+		{{- $Width = $image.Width -}}
+		{{- $Height = $image.Height -}}
+		{{- $galleryImage = true -}}
+
+		{{- if (default true .Page.Site.Params.imageProcessing.content.enabled) -}}
+			{{- $small := $image.Resize `480x` -}}
+			{{- $big := $image.Resize `1024x` -}}
+			{{- $Srcset = printf `%s 480w, %s 1024w` $small.RelPermalink $big.RelPermalink -}}
+		{{- end -}}
+	{{- end -}}
+{{- end -}}
+
+
+{{/* Construct the img element. */}}
+<img src="{{ $src }}"
+	{{ with $Width }}width="{{ . }}"{{ end }}
+	{{ with $Height }}height="{{ . }}"{{ end }}
+	{{ with $Srcset }}srcset="{{ . }}"{{ end }}
+	loading="lazy"
+	{{ with $alt }}
+		alt="{{ . }}"
+	{{ end }}
+	{{ if $galleryImage }}
+		class="gallery-image" 
+		data-flex-grow="{{ div (mul $image.Width 100) $image.Height }}"
+		data-flex-basis="{{ div (mul $image.Width 240) $image.Height }}px"
+	{{ end }}
+>
