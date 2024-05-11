@@ -41,6 +41,9 @@
                     {{ end }}
                 </div>
             {{ end }}
+            <div>
+                {{- partial "content-with-wikilinks" . | safeHTML -}}
+            </div>
         </div>
     </header>
 

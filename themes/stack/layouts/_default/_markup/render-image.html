@@ -4,7 +4,7 @@
 {{- $u := urls.Parse .Destination -}}
 {{- $src := $u.String -}}
 
-{{/* Get the image resource, external or not.
+{{/* First try to get the local image resource.
 	 give a url like "image/img.png", returns a resource.Resource */}}
 {{- $image := .Page.Resources.GetMatch (printf "%s" ($src | safeURL)) -}}
 

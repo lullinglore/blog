@@ -1,4 +1,8 @@
 # STACK PARAMS #
+# SETTINGS
+mainSections = ["blog", "artblog"]
+featuredImageField = "banner"
+
 # WIDGETS
 [widgets]
 

@@ -1,0 +1,55 @@
+# Sidebar
+[[main]]
+    name = "À propos"
+    pageRef = "/about"
+    weight = 10
+    params.icon = "user"
+
+[[main]]
+    name = "Purpleverse"
+    pageRef = "/world"
+    weight = 20
+    params.icon = "infinity"
+
+[[main]]
+    name = "Projets"
+    pageRef = "/projects"
+    weight = 30
+    params.icon = "hash"
+
+[[main]]
+    name = "Artblog"
+    pageRef = "/artblog"
+    weight = 35
+    params.icon = "tag"
+
+[[main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 40
+    params.icon = "archives"
+
+[[main]]
+    name = "Search"
+    pageRef = "/search"
+    weight = 50
+    params.icon = "search"
+
+# Social links
+[[social]]
+    identifier = "tumblr"
+    name = "Tumblr"
+    url = "https://lulullia.tumblr.com/about"
+    params.icon = "social-tumblr"
+
+[[social]]
+    identifier = "gamejolt"
+    name = "Game Jolt"
+    url = "https://gamejolt.com/@Lulullia"
+    params.icon = "link"
+
+[[social]]
+    identifier = "youtube"
+    name = "YouTube"
+    url = "https://youtube.com/@lulullia"
+    params.icon = "social-yt"

@@ -5,82 +5,31 @@ title = "Purple Planetarium"
 author = "Lulullia"
 copyright = "Lulullia"
 
-languageCode = "en"
-#defaultContentLanguage = "en"
-#defaultContentLanguageInSubdir = true
-
 refLinksErrorLevel = "WARNING"
 refLinksNotFoundURL = "#"
 
 paginate = 10
 
-# MENU
-[menu]
+# LANGUAGE
+defaultContentLanguage = "en"
 
-  [[menu.main]]
-    name = "About"
-    pageRef = "/about"
-    weight = 10
-    [[menu.main.params]]
-      icon = "user"
+[languages]
 
-  [[menu.main]]
-    name = "Purpleverse"
-    pageRef = "/world"
-    weight = 20
-    [[menu.main.params]]
-      icon = "infinity"
+  [languages.en]
+    #contentDir = "content/en"
+    disabled = false
+    languageCode = "en"
+    languageDirection = "ltr"
+    languageName = "English"
+    params.sidebar.subtitle = "One world, countless stories"
 
-  [[menu.main]]
-    name = "Projects"
-    pageRef = "/projects"
-    weight = 30
-    [[menu.main.params]]
-      icon = "hash"
-
-  [[menu.main]]
-    name = "Artblog"
-    pageRef = "/artblog"
-    weight = 35
-    [[menu.main.params]]
-      icon = "tag"
-
-  [[menu.main]]
-    name = "Blog"
-    pageRef = "/blog"
-    weight = 40
-    [[menu.main.params]]
-      icon = "archives"
-
-  [[menu.main]]
-    name = "Search"
-    pageRef = "/search"
-    weight = 50
-    [[menu.main.params]]
-      icon = "search"
-
-  # Social links
-  [[menu.social]]
-    identifier = "tumblr"
-    name = "Tumblr"
-    url = "https://youtube.com/@lulullia"
-    [[menu.social.params]]
-      icon = "link"
-  
-  [[menu.social]]
-    identifier = "gamejolt"
-    name = "Game Jolt"
-    url = "https://youtube.com/@lulullia"
-    [[menu.social.params]]
-      icon = "link"
-  
-  [[menu.social]]
-    identifier = "youtube"
-    name = "YouTube"
-    url = "https://youtube.com/@lulullia"
-    [[menu.social.params]]
-      icon = "link"
-
+  [languages.fr]
+    #contentDir = "content/en"
+    disabled = false
+    languageCode = "fr"
+    languageDirection = "ltr"
+    languageName = "Français"
+    params.sidebar.subtitle = "Un monde, d'innombrables histoires"
 
 # MODULE
 [module]
