@@ -4,5 +4,3 @@ aliases:
   - entry
   - entries
 ---
-
-All blog entries.

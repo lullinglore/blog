@@ -1,5 +1,4 @@
 ---
 title: 'Artblog'
+description: "All art entries."
 ---
-
-All art entries.

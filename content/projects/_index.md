@@ -1,5 +1,4 @@
 ---
 title: "Projects"
+description: "List of Projects."
 ---
-
-List of Projects.
