@@ -50,6 +50,16 @@ widget:
     tagCloud:
         title:
             other: Mots clés
+            
+    subForm:
+        title:
+            other: Newsletter
+        description:
+            other: Ne manque aucun post, article ou nouveauté !
+        emailForm:
+            other: Addresse email
+        noSpam:
+            other: Pas de spam. Désinscription possible à tout moment.
 
 search:
     title:

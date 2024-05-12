@@ -55,6 +55,16 @@ widget:
         title:
             other: Categories
 
+    subForm:
+        title:
+            other: Newsletter
+        description:
+            other: Receive new content, posts and news in your inbox!
+        emailForm:
+            other: Email address
+        noSpam:
+            other: No spam. Unsubscribe at any time.
+
 search:
     title:
         other: Search
