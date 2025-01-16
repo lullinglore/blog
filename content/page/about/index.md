@@ -9,4 +9,3 @@ This website is still under construction, so in the meantime, check out my [prev
 - [Journey](/journey)
 - [Projects](/projects)
 - [Purpleverse Wiki](/world)
-[hey](/sub-confirmed)

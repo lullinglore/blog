@@ -1,0 +1,6 @@
+<div class="embed video-player">
+    <video class="tumblr-player" width="100%" disablepictureinpicture
+        {{ with .Get "controls" }}controls{{end}} {{ with .Get "loop" }}loop{{end}} {{ with .Get "autoplay" }}autoplay{{end}} >
+        <source src="https://va.media.tumblr.com/{{ .Get "id" }}.mp4" type="video/mp4" />
+    </video>
+</div>
