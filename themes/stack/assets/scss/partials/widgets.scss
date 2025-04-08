@@ -65,3 +65,210 @@
         }
     }
 }
+
+/* Newsletter form sidebar widget */
+.formkit-form[data-uid="552a313362"] {
+    overflow: hidden;
+    position: relative;
+    color: var(--body-text-color);
+
+    .formkit-subheader {
+        margin-bottom: 10px;
+    }
+
+    .formkit-fields {
+        display: flex;
+    }
+
+    .formkit-field {
+        width: 100%;
+        
+        input {
+            background-color: var(--card-background);
+            border-radius: var(--card-border-radius);
+            box-shadow: var(--shadow-l1);
+            border: none;
+            font-size: 1.5rem;
+            width: 100%;
+            color: var(--card-text-color-main);
+            padding: 15px 20px;
+
+            -webkit-appearance: none;
+            appearance: none;
+            transition: box-shadow 0.3s ease;
+
+            &:focus {
+                outline: none;
+                box-shadow: var(--shadow-l2);
+            }
+        }
+    }
+
+    .formkit-submit {
+        border: none;
+        border-radius: var(--card-border-radius);
+        background-color: var(--accent-color);
+        box-shadow: var(--shadow-l1);
+        vertical-align: middle;
+        padding: 0px 10px;
+        margin-left: 6px;
+        color: #ffffff;
+
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+
+        &:hover,
+        &:focus {
+            outline: none;
+        }
+        &:hover {
+            background-color: var(--card-background);
+            color: var(--accent-color);
+        }
+    }
+
+    .formkit-guarantee {
+        margin-top: 8px;
+        font-size: 10px;
+        text-align: center;
+        color: var(--card-text-color-tertiary);
+    }
+    
+    .seva-custom-content {
+        color: var(--card-text-color-tertiary);
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .formkit-alert {
+        background: var(--card-background);
+        border: 2px solid #e3e3e3;
+        border-radius: var(--card-border-radius);
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+        list-style: none;
+        padding: 12px;
+        text-align: center;
+        width: 100%;
+        font-size: 1em;
+
+        &:empty {
+            display: none;
+        }
+    }
+
+    .formkit-alert-success {
+        background: var(--card-background);
+        border-color: var(--accent-color);
+        color: var(--accent-color);
+    }
+    .formkit-alert-error {
+        background: var(--card-background);
+        border-color: #f2643b;
+        color: #ea4110;
+    }
+
+    .formkit-spinner {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        height: 0px;
+        width: 0px;
+        margin: 0 auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 0px;
+        overflow: hidden;
+        text-align: center;
+        -webkit-transition: all 300ms ease-in-out;
+        transition: all 300ms ease-in-out;
+
+        >div {
+            margin: auto;
+            width: 12px;
+            height: 12px;
+            background-color: var(--card-background);
+            opacity: 0.3;
+            border-radius: 100%;
+            display: inline-block;
+            -webkit-animation: formkit-bouncedelay-formkit-form-data-uid-552a313362- 1.4s infinite ease-in-out both;
+            animation: formkit-bouncedelay-formkit-form-data-uid-552a313362- 1.4s infinite ease-in-out both;
+
+            &:nth-child(1) {
+                -webkit-animation-delay: -0.32s;
+                animation-delay: -0.32s;
+            }
+
+            &:nth-child(2) {
+                -webkit-animation-delay: -0.16s;
+                animation-delay: -0.16s;
+            }
+        }
+    }
+
+    .formkit-submit[data-active] .formkit-spinner {
+        opacity: 1;
+        height: 100%;
+        width: 50px;
+
+        ~span {
+            opacity: 0;
+        }
+    }
+}
+
+@-webkit-keyframes formkit-bouncedelay-formkit-form-data-uid-552a313362- {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes formkit-bouncedelay-formkit-form-data-uid-552a313362- {
+
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+        transform: scale(0);
+    }
+
+    40% {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
+/* Overlay that pops up when subscribing */
+.seva-overlay.formkit-overlay {
+    .seva-modal.formkit-modal.guard {
+        width: 415px !important;
+
+        .formkit-close {
+            color: #373f45;
+            background: none;
+            top: 0px;
+            right: 0px;
+        }
+
+    }
+}
+.confirmation__content form .subtitle::after {
+    content: " (optional)";
+}
