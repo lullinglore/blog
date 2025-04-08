@@ -11,7 +11,7 @@ params:
     favicon:
 
     footer:
-        since: 2024
+        since:
         customText:
 
     dateFormat:
@@ -21,13 +21,14 @@ params:
     sidebar:
         compact: false
         emoji:
-        subtitle: One world, countless stories
+        subtitle:
         avatar:
             enabled: true
             local: true
             src: img/avatar.png
 
     article:
+        headingAnchor: false
         math: false
         toc: true
         readingTime: true
