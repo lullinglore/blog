@@ -272,3 +272,13 @@
 .confirmation__content form .subtitle::after {
     content: " (optional)";
 }
+
+
+/* Ko-Fi banner */
+.widget.kofi-button {
+    margin: auto;
+    
+    a, img {
+        max-width: 200px;
+    }
+}

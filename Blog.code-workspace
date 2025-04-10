@@ -4,5 +4,61 @@
 			"path": "."
 		}
 	],
-	"settings": {}
+	"settings": {
+		"folder-customization.folders": [
+			{
+				"path": "Blog\\config\\",
+				"color": "foldercustomization.AnsiColor8"
+			},
+			{
+				"path": "Blog\\i18n\\",
+				"color": "foldercustomization.AnsiColor8"
+			},
+			{
+				"path": "Blog\\themes\\stack\\",
+				"color": "foldercustomization.AnsiColor8",
+				"badge": "ST"
+			},
+			{
+				"path": "Blog\\themes\\stack\\layouts\\",
+				"color": "foldercustomization.AnsiColor252"
+			},
+			{
+				"path": "Blog\\content\\",
+				"badge": "🖊️"
+			},
+			{
+				"path": "Blog\\public\\",
+				"color": "foldercustomization.AnsiColor8"
+			},
+			{
+				"path": "Blog\\content\\world\\",
+				"tooltip": "World",
+				"badge": "🪐"
+			},
+			{
+				"path": "Blog\\layouts\\partials\\",
+				"badge": "✂️"
+			},
+			{
+				"path": "Blog\\themes\\stack\\layouts\\partials\\",
+				"badge": "✂️"
+			},
+			{
+				"path": "Blog\\layouts\\"
+			},
+			{
+				"path": "Blog\\layouts\\shortcodes\\",
+				"badge": "🎫"
+			},
+			{
+				"path": "Blog\\themes\\stack\\layouts\\shortcodes\\",
+				"badge": "🎫"
+			},
+			{
+				"path": "Blog\\static\\",
+				"color": "foldercustomization.AnsiColor8"
+			}
+		]
+	}
 }

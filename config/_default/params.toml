@@ -12,6 +12,8 @@ featuredImageField = "banner"
     type = "categories"
   [[widgets.homepage]]
     type = "newsletter-sidebar"
+  [[widgets.homepage]]
+    type = "kofi-button"
 
   [[widgets.page]]
     type = "search"
@@ -19,3 +21,5 @@ featuredImageField = "banner"
     type = "toc"
   [[widgets.page]]
     type = "newsletter-sidebar"
+  [[widgets.page]]
+    type = "kofi-button"
