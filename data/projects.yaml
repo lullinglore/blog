@@ -1,0 +1,61 @@
+######################
+#### PROJECT DATA ####
+######################
+
+# Type: used to filter projects on project page.
+# Status:
+#   wip: currently working on it
+#   backburner: not in focus but still gets worked on sometimes
+#   paused: not worked on but not abandoned; will finish it eventually
+#   completed: done
+#   cancelled: not finished and won't ever be, probably
+# Featured: will get spotlighted on project page.
+
+world:
+  type:
+    - story
+    - art
+  description: All blog entries related to the Purpleverse.
+  status: wip
+  featured: true
+
+purple:
+  type:
+    - story
+    - game
+  description: All blog entries related to this project.
+  status: wip
+  featured: true
+
+circus:
+  type:
+    - story
+    - game
+  description: All blog entries related to this project.
+  status: backburner
+  featured: true
+
+lone:
+  type:
+    - story
+    - game
+  description: All blog entries related to this project.
+  status: backburner
+  featured: true
+
+lyphuriaa:
+  type:
+    - story
+    - game
+  description: All blog entries related to this project.
+  status: backburner
+  featured: true
+
+
+candle-holders:
+  type:
+    - story
+    - art
+  description: All blog entries related to this project.
+  status: wip
+  featured: false

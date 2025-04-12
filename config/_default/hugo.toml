@@ -58,8 +58,8 @@ defaultContentLanguage = "en"
 [permalinks]
   page = "/:slug/"
 
-  blog = "/entry/:slug/"
-  artblog = "/entry/art-:slug/"
+  blog = "/entry/:year/:slug/"
+  artblog = "/entry/:year/art-:slug/"
 
   world = "/world/:slug/"
   categories = "/world/:slug/"
