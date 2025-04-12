@@ -1,8 +1,5 @@
 ---
-title: 'Blog'
-aliases:
-  - entry
-  - entries
+title: 'Artblog'
 description: "Les posts sous cette catégorie ne sont disponibles qu'en anglais."
 ---
-[Changer de langue](/blog)
+[Changer de langue](/artblog)

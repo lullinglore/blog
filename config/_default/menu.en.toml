@@ -1,7 +1,7 @@
 # Sidebar
 [[main]]
     name = "About"
-    pageRef = "/page/about"
+    pageRef = "/page/about" #Path to page in project not in final website
     weight = 10
     params.icon = "user"
 

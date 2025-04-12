@@ -47,9 +47,9 @@ widget:
         more:
             other: Autres
 
-    tagCloud:
+    topicCloud:
         title:
-            other: Mots clés
+            other: Sujets
     categoriesCloud:
         title:
             other: Catégories

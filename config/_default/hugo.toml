@@ -40,18 +40,18 @@ defaultContentLanguage = "en"
 [module]
 
   [[module.mounts]]
-      source = "content"
+      source = "D:/Files/!!NOTES!!/Chaotic Creativity/Moons/Blog"
       target = "content"
   [[module.mounts]]
-      source = "D:/Files/!!NOTES!!/Chaotic Creativity/Moons/Blog"
+      source = "content"
       target = "content"
 
   [[module.mounts]]
-      source = "assets"
-      target = "assets"
-  [[module.mounts]]
       source = "D:/Files/!!NOTES!!/Chaotic Creativity/Storehouse/att/img"
       target = "assets/img"
+  [[module.mounts]]
+      source = "assets"
+      target = "assets"
 
 
 # PERMALINKS
@@ -59,7 +59,7 @@ defaultContentLanguage = "en"
   page = "/:slug/"
 
   blog = "/entry/:slug/"
-  artblog = "/entry/:slug/"
+  artblog = "/entry/art-:slug/"
 
   world = "/world/:slug/"
   categories = "/world/:slug/"

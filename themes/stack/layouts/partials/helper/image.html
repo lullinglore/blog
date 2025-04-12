@@ -11,8 +11,8 @@
         <!-- Is an external image -->
         {{ $result = merge $result (dict "permalink" $imageValue) }}
     {{ else }}
-        {{ $pageResourceImage := .Context.Resources.GetMatch (printf "%s" ($imageValue | safeURL)) }}
-        
+        {{ $pageResourceImage := or (.Context.Resources.GetMatch (printf "%s" ($imageValue | safeURL))) (resources.Get (printf "%s" ($imageValue | safeURL))) }}
+
         {{ if $pageResourceImage }}
             <!-- If image is found under page bundle -->
             {{ $result = merge $result (dict "permalink" $pageResourceImage.RelPermalink) }}
@@ -22,7 +22,7 @@
                 {{ $result = merge $result (dict "resource" $pageResourceImage) }}
             {{ end }}
         {{ else }}
-            <!-- Can not find the image under page bundle. Could be a relative linked image -->
+            <!-- Can not find the image. Could be a relative linked image -->
             {{ $result = merge $result (dict "permalink" (relURL $imageValue)) }}
         {{ end }}
 

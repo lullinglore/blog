@@ -48,9 +48,9 @@ widget:
         more:
             other: More
 
-    tagCloud:
+    topicCloud:
         title:
-            other: Tags
+            other: Topics
     categoriesCloud:
         title:
             other: Categories

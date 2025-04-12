@@ -1,7 +1,6 @@
 # STACK PARAMS #
 # SETTINGS
 mainSections = ["blog", "artblog"]
-featuredImageField = "banner"
 
 # WIDGETS
 [widgets]
@@ -9,7 +8,9 @@ featuredImageField = "banner"
   [[widgets.homepage]]
     type = "search"
   [[widgets.homepage]]
-    type = "categories"
+    type = "tag-cloud-topics"
+  [[widgets.homepage]]
+    type = "tag-cloud-categories"
   [[widgets.homepage]]
     type = "newsletter-sidebar"
   [[widgets.homepage]]
