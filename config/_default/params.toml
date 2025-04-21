@@ -1,6 +1,7 @@
 # STACK PARAMS #
 # SETTINGS
 mainSections = ["blog", "artblog"]
+math = false #Set to true in frontmatter whenever needed
 
 # WIDGETS
 [widgets]

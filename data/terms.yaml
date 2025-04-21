@@ -1,0 +1,16 @@
+########################
+#### TERM PAGE DATA ####
+########################
+
+topics:
+  update:
+    description: Entries containing progress updates.
+
+  worldbuilding:
+    description: Entries related to worldbuilding.
+
+
+categories:
+  geography:
+    description: Physical places of the world.
+    description.fr: Différents endroits du monde.

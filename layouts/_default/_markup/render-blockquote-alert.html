@@ -1,0 +1,56 @@
+{{- /* CALLOUTS & INFOBOXES */ -}}
+
+{{- /* INFOBOXES */ -}}
+{{- if (hasPrefix .AlertType "infobox") -}}
+
+    {{- /* Get parameters */ -}}
+    {{- $layoutStacked := strings.Contains .AlertType "stacked" -}}
+    {{- $headingLevel := "1" -}}
+    {{- if strings.Contains .AlertType "levelii" -}}{{- $headingLevel = "2" -}}{{- end -}}
+    {{- if strings.Contains .AlertType "leveliii" -}}{{- $headingLevel = "3" -}}{{- end -}}
+    {{- if strings.Contains .AlertType "leveliv" -}}{{- $headingLevel = "4" -}}{{- end -}}
+
+    {{- $collapsible := false -}}
+    {{- $collapsed := false -}}
+    {{- if not (eq .AlertSign "") -}}{{- $collapsible = true -}}{{- end -}}
+    {{- if eq .AlertSign "-" -}}{{- $collapsed = true -}}{{- end -}}
+    
+
+    {{- /* Build box */ -}}
+    <div class="infobox">
+
+        {{ if $collapsible }}
+        <details {{ if not $collapsed }}open{{ end }}>
+            <summary class="infobox-heading h{{ $headingLevel }}">
+                <span role="term" aria-details="infobox-heading-{{ .Ordinal }}">{{ .AlertTitle }}</span>
+            </summary>
+        </details>
+
+        {{ else if .AlertTitle}}
+            <div class="infobox-heading h{{ $headingLevel }}">{{ .AlertTitle }}</div>
+        {{ end }}
+
+        <div class="infobox-content {{ if $collapsible }}collapsible{{ end }}"
+        {{ if $layoutStacked }}layout="stacked"{{ end }} {{ if $collapsible }}role="definition" id="infobox-heading-{{ .Ordinal }}"{{ end }}>
+            {{- $content := .Text | safeHTML -}}
+            {{- $content = replace $content "<strong>" "<span class=\"infobox-key\">" -}}
+            {{- $content = replace $content "</strong>" "</span><span class=\"infobox-value\">" -}}
+            {{- $content = replace $content "<p>" "<p class=\"infobox-cell\">" -}}
+            {{ $content | safeHTML }}
+        </div>
+
+    </div>
+
+{{- /* CALLOUTS - TODO create basic callout functionality like collapsing */ -}}
+{{- else -}}
+    <blockquote class="alert alert-{{ .AlertType }}">
+        <p class="alert-heading">
+            {{ with .AlertTitle }}
+            {{ . }}
+            {{ else }}
+            {{ title .AlertType }}
+            {{ end }}
+        </p>
+        {{ .Text }}
+    </blockquote>
+{{- end -}}

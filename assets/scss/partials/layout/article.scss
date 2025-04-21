@@ -395,6 +395,105 @@
         background-color: var(--tr-even-background-color);
     }
 
+    .infobox {
+        float: right;
+        clear: right;
+        background-color: var(--body-background);
+        padding: 4px;
+        width: 250px;
+
+        &:not(.infobox + .infobox) {
+            border-top-right-radius: var(--box-border-radius);
+            border-top-left-radius: var(--box-border-radius);
+        }
+        &:not(:has(~ .infobox)) {
+            border-bottom-right-radius: var(--box-border-radius);
+            border-bottom-left-radius: var(--box-border-radius);
+        }
+
+        .infobox-heading {
+            text-align: center;
+            font-weight: bold;
+
+            &.h1 { font-size: 1.25em; }
+            &.h2 { font-size: 1.02em; }
+            &.h3 { font-size: 0.9em; }
+            &.h4 { font-size: 0.85em; }
+
+        }
+
+        details {
+            overflow: hidden;
+            &:hover { cursor: pointer; }
+        }
+        summary {
+            display: block;
+            padding: 0px 8px;
+            &::-webkit-details-marker { display: none; }
+
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 6px;
+
+                &::after {
+                    content: "»";
+                    display: flex;
+                    align-items: center;
+                    transition: rotate 400ms ease-out;
+                }
+            }
+        }
+
+        .infobox-content {
+            background-color: var(--card-background);
+            border-radius: var(--box-border-radius);
+            padding: 8px;
+            font-size: 0.8em;
+
+            &.collapsible {
+                box-sizing: border-box;
+                max-height: 0;
+                display: none;
+                overflow: hidden;
+                transition: max-height 600ms ease-out;
+            }
+        }
+        details[open] + .infobox-content {
+            display: block;
+            max-height: 1500px; /* Set a max-height value enough to show all the content */        
+            transition: max-height 2000ms ease-out;
+        }
+        details[open] summary span::after {
+            rotate: 90deg;
+            transition: rotate 400ms ease-out;
+        }
+
+        .infobox-cell {
+            display: flex;
+            width: 100%;
+            margin: 0px;
+        }
+
+        .infobox-key {
+            font-weight: bold;
+            width: 50%;
+        }
+
+        .infobox-content[layout="stacked"] {
+            .infobox-cell {
+                flex-direction: column;
+            }
+
+            .infobox-key {
+                width: 100%;
+            }
+        }
+    }
+
+    .callout {}
+
     .twitter-tweet {
         color: var(--card-text-color-main);
     }
@@ -443,8 +542,8 @@
         width: calc(100% + var(--card-padding) * 2);
     }
 
-    /// Make long KaTeX equations scrollable in the x-axis
-    .katex-display > .katex {
+    /// Make long MathJax equations scrollable in the x-axis
+    .MathJax {
         overflow-x: auto;
         overflow-y: hidden;
     }
