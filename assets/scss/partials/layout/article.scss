@@ -212,6 +212,10 @@
         margin: 1.5em 0;
     }
 
+    strong {
+        color: var(--accent-color);
+    }
+
     h1,
     h2,
     h3,
@@ -400,7 +404,8 @@
         clear: right;
         background-color: var(--body-background);
         padding: 4px;
-        width: 250px;
+        width: 40%;
+        min-width: 200px;
 
         &:not(.infobox + .infobox) {
             border-top-right-radius: var(--box-border-radius);
@@ -456,14 +461,17 @@
                 box-sizing: border-box;
                 max-height: 0;
                 display: none;
+                opacity: 0;
                 overflow: hidden;
                 transition: max-height 600ms ease-out;
             }
         }
         details[open] + .infobox-content {
             display: block;
-            max-height: 1500px; /* Set a max-height value enough to show all the content */        
+            max-height: 1000px; /* Set a max-height value enough to show all the content */        
+            opacity: 1;
             transition: max-height 2000ms ease-out;
+            transition: opacity ease-in, 0.6s transform ease;
         }
         details[open] summary span::after {
             rotate: 90deg;
@@ -481,6 +489,7 @@
             width: 50%;
         }
 
+        // Stacked layout
         .infobox-content[layout="stacked"] {
             .infobox-cell {
                 flex-direction: column;
@@ -489,6 +498,57 @@
             .infobox-key {
                 width: 100%;
             }
+        }
+
+        // Infobox tabs
+        $max-tab-count: 6;
+        .infobox-tabs {
+            max-width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 3px;
+            position: relative;
+        }
+
+        .infobox-tab {
+            display: none;
+            @for $i from 1 through $max-tab-count {
+                &:checked:nth-of-type(#{$i}) ~ .infobox-tab-content:nth-of-type(#{$i}) {
+                    opacity: 1;
+                    position: relative;
+                    top: 0;
+                    z-index: 100;
+                    transform: translateY(0px);
+                    transition: 0.5s opacity ease-in, 0.6s transform ease;
+                }
+            }
+
+            + label {
+                display: block;
+                flex-grow: 3;
+                text-align: center;
+                padding: 2px 4px;
+                border-bottom: 2px solid var(--body-background);
+
+                cursor: pointer;
+                user-select: none;
+                box-sizing: border-box;
+            }
+            &:checked + label {
+                border-color: var(--accent-color);
+                border-width: 4px;
+                font-weight: bold;
+            }
+        }
+
+        .infobox-tab-content {
+            background-color: transparent;
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            opacity: 0;
+            left: 0;
+            transform: translateY(-3px);
         }
     }
 

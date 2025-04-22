@@ -33,9 +33,37 @@
         <div class="infobox-content {{ if $collapsible }}collapsible{{ end }}"
         {{ if $layoutStacked }}layout="stacked"{{ end }} {{ if $collapsible }}role="definition" id="infobox-heading-{{ .Ordinal }}"{{ end }}>
             {{- $content := .Text | safeHTML -}}
+                
+            {{- /* Tabs */ -}}
+            {{- $tabIDs := findRE `<tab>` $content -}}
+            {{- $firstTab := true -}}
+
+            {{- range $tabNum, $ID := $tabIDs -}}
+                {{- $checked := "" -}}
+                {{- if $firstTab -}}
+                    {{- $checked = " checked" -}}
+                    {{- $firstTab = false -}}
+                {{- end -}}
+
+                {{- $tabNum = add $tabNum 1 -}}
+                {{- $tabHTML := printf "<input type=\"radio\" id=\"itab-%[1]d\" name=\"infobox-tabs-%[2]d\" class=\"infobox-tab\"%[3]s><label for=\"itab-%[1]d\">" $tabNum $.Ordinal $checked -}}
+                {{- $content = replace $content "<tab>" $tabHTML 1 -}}
+                {{- $contentHTML := "<div class=\"infobox-tab-content\">" -}}
+            {{- end -}}
+
+            {{- $content = replace $content "</tab>" "</label>" -}}
+            {{- $content = replace $content "</label></p>" "</label>" -}}
+            {{- $content = replace $content "<p><input " "<div class=\"infobox-tabs\"><input " -}}
+            {{- $content = replace $content "<p>%%tab%%</p>" "<div class=\"infobox-tab-content\">" -}}
+            {{- $content = replace $content "<p>%%/tab%% %%tab%%</p>" "</div><div class=\"infobox-tab-content\">" -}}
+            {{- $content = replace $content "<p>%%/tab%%</p>" "</div></div>" -}}
+
+            {{- /* Basic formatting */ -}}
             {{- $content = replace $content "<strong>" "<span class=\"infobox-key\">" -}}
             {{- $content = replace $content "</strong>" "</span><span class=\"infobox-value\">" -}}
             {{- $content = replace $content "<p>" "<p class=\"infobox-cell\">" -}}
+
+
             {{ $content | safeHTML }}
         </div>
 
