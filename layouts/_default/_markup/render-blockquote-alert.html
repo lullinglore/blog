@@ -23,6 +23,7 @@
         <details {{ if not $collapsed }}open{{ end }}>
             <summary class="infobox-heading h{{ $headingLevel }}">
                 <span role="term" aria-details="infobox-heading-{{ .Ordinal }}">{{ .AlertTitle }}</span>
+                <span class="icon">{{ partial "helper/icon" "chevron-right" }}</span>
             </summary>
         </details>
 
