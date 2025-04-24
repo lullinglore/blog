@@ -2,15 +2,14 @@
 #### TERM PAGE DATA ####
 ########################
 
-topics:
-  update:
-    description: Entries containing progress updates.
-
-  worldbuilding:
-    description: Entries related to worldbuilding.
-
-
+# I have no idea whether to add translations here or add this data to translation file,,, 
 categories:
+  # Order here will be used for display on the main page
   geography:
-    description: Physical places of the world.
-    description.fr: Différents endroits du monde.
+    group: natural
+  alterations:
+    group: natural
+  technology:
+    group: artificial
+  communities:
+    group: cultural

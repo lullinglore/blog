@@ -1,0 +1,223 @@
+toggleMenu:
+    other: Afficher le menu
+
+darkMode:
+    other: Mode sombre
+
+list:
+    page:
+        one: "{{ .Count }} page"
+        other: "{{ .Count }} pages"
+
+    section:
+        other: Section
+
+    subsection:
+        one: Sous-section
+        other: Sous-sections
+
+article:
+    back:
+        other: Retour
+
+    tableOfContents:
+        other: Table des matières
+
+    relatedContent:
+        other: Contenus liés
+
+    lastUpdatedOn:
+        other: Dernière mise à jour le
+
+    readingTime:
+        one: "{{ .Count }} minute de lecture"
+        other: "{{ .Count }} minutes de lecture"
+
+notFound:
+    title:
+        other: Page non trouvée
+    subtitle:
+        other: Cette page n'existe pas.
+
+widget:
+    archives:
+        title:
+            other: Archives
+
+        more:
+            other: Autres
+
+    topicCloud:
+        title:
+            other: Sujets
+    categoriesCloud:
+        title:
+            other: Catégories
+        
+    subForm:
+        title:
+            other: Newsletter
+        description:
+            other: Ne manque aucun post, article ou nouveauté !
+        emailForm:
+            other: Addresse email
+        noSpam:
+            other: Pas de spam. Désinscription possible à tout moment.
+
+search:
+    title:
+        other: Rechercher
+
+    placeholder:
+        other: Cherchez un article, un post, etc.
+
+    resultTitle:
+        other: "#PAGES_COUNT pages (#TIME_SECONDS secondes)"
+
+footer:
+    builtWith:
+        other: Généré avec {{ .Generator }}
+
+    designedBy:
+        other: Thème {{ .Theme }} conçu par {{ .DesignedBy }}
+
+# TAXONOMIES
+categories:
+    alterations:
+        title: 
+            one: Altération
+            other: Altérations
+        desc: todotodo
+    
+    art-entertainment:
+        title: 
+            other: Art & Divertissement
+        desc: todotodo
+    
+    buildings:
+        title: 
+            one: Construction
+            other: Constructions
+        desc: todotodo
+    
+    characters:
+        title: 
+            one: Personnage
+            other: Personnages
+        desc: todotodo
+    
+    communities:
+        title: 
+            one: Communauté
+            other: Communautés
+        desc: todotodo
+    
+    competitions:
+        title: 
+            one: Compétition
+            other: Compétitions
+        desc: todotodo
+    
+    countries:
+        title: 
+            other: Pays
+        desc: todotodo
+    
+    ecologies:
+        title: 
+            one: Écologie
+            other: Écologies
+        desc: todotodo
+    
+    events:
+        title:
+            one: Évènement
+            other: Évènements
+        desc: todotodo
+    
+    gastronomy:
+        title: 
+            other: Gastronomie
+        desc: todotodo
+    
+    geography:
+        title: 
+            other: Géographie
+        desc: Différents endroits du monde.
+    
+    items:
+        title: 
+            one: Objet
+            other: Objets
+        desc: todo
+    
+    materials:
+        title: 
+            one: Matériau
+            other: Matériaux
+        desc: todo
+    
+    media:
+        title: 
+            other: Média
+        desc: todo
+    
+    natural-laws:
+        title: 
+            one: Loi naturelle
+            other: Lois naturelles
+        desc: todo
+    
+    professions:
+        title: 
+            one: Profession
+            other: Professions
+        desc: todo
+    
+    relationships:
+        title: 
+            one: Relation
+            other: Relations
+        desc: todo
+    
+    settlements:
+        title: 
+            one: Peuplement
+            other: Peuplements
+        desc: todo
+    
+    species:
+        title: 
+            one: Espèce
+            other: Espèces
+        desc: todo
+    
+    systems:
+        title: 
+            one: Système
+            other: Systèmes
+        desc: todo
+    
+    technology:
+        title: 
+            other: Technologie
+        desc: todo
+    
+    timelines:
+        title: 
+            one: Chronologie
+            other: Chronologies
+        desc: todo
+    
+    titles:
+        title: 
+            one: Titre
+            other: Titres
+        desc: todo
+    
+    traditions:
+        title: 
+            one: Tradition
+            other: Traditions
+        desc: todo
+    
