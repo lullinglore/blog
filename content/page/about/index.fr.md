@@ -2,7 +2,7 @@
 title: 'À propos'
 ---
 
-Site en construction! En attendant, jetez un coup d'oeil à mon [ancien blog](https://lulullia.tumblr.com/about) c:
+Site en construction! En attendant, jetez un coup d'oeil à mon [ancien blog](https://lullinglore.tumblr.com/about) c:
 
 Ici des infos sur Lulullia...
 

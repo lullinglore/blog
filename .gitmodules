@@ -3,5 +3,5 @@
 	url = https://github.com/tomowang/hugo-theme-tailwind.git
 [submodule "public"]
 	path = public
-	url = https://github.com/Lulullia/lulullia.github.io.git
+	url = https://github.com/lullinglore/lullinglore.github.io.git
 	branch = main

@@ -1,2 +1,2 @@
-# lulullia.github.io
+# lullinglore.github.io
 Purple Planetarium website/blog

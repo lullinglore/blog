@@ -39,17 +39,17 @@
 [[social]]
     identifier = "tumblr"
     name = "Tumblr"
-    url = "https://lulullia.tumblr.com/about"
+    url = "https://lullinglore.tumblr.com/about"
     params.icon = "social-tumblr"
 
 [[social]]
     identifier = "gamejolt"
     name = "Game Jolt"
-    url = "https://gamejolt.com/@Lulullia"
+    url = "https://gamejolt.com/@lullinglore"
     params.icon = "link"
 
 [[social]]
     identifier = "youtube"
     name = "YouTube"
-    url = "https://youtube.com/@lulullia"
+    url = "https://youtube.com/@lullinglore"
     params.icon = "social-yt"
