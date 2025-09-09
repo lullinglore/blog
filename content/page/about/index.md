@@ -2,7 +2,7 @@
 title: 'About'
 ---
 
-Youhou, Luli here!
+Youhou, Lulling here!
 
 This website is still under construction, so in the meantime, check out my [previous blog](https://lullinglore.tumblr.com/about) <:
 

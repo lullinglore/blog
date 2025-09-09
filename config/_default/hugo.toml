@@ -30,7 +30,7 @@ defaultContentLanguage = "en"
 
   [languages.fr]
     #contentDir = "content/en"
-    disabled = false
+    disabled = true
     languageCode = "fr"
     languageDirection = "ltr"
     languageName = "Français"
