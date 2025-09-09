@@ -1,1 +1,1 @@
-hugo server --navigateToChanged $1
+hugo server --navigateToChanged --cleanDestinationDir $1

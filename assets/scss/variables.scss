@@ -2,6 +2,39 @@ $defaultTagBackgrounds: #8ea885, #df7988, #0177b8, #ffb900, #6b69d6;
 $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
 /*
+*   Fonts
+*/
+// SPACE MONO
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/space-mono.regular.woff2") format("woff2"), url("/fonts/space-mono.regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Space Mono";
+    font-style: normal;
+    font-weight: bold;
+    font-display: swap;
+    src: url("/fonts/space-mono.bold.woff2") format("woff2"), url("/fonts/space-mono.bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Space Mono";
+    font-style: italic;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/space-mono.italic.woff2") format("woff2"), url("/fonts/space-mono.italic.woff") format("woff");
+}
+@font-face {
+    font-family: "Space Mono";
+    font-style: italic;
+    font-weight: bold;
+    font-display: swap;
+    src: url("/fonts/space-mono.bolditalic.woff2") format("woff2"), url("/fonts/space-mono.bolditalic.woff") format("woff");
+}
+
+/*
 *   Global style
 */
 :root {
@@ -37,14 +70,14 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 }
 
-/**
+/*
 *   Global font family
 */
 :root {
-    --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Droid Sans", "Helvetica Neue";
+    --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
     --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
 
-    --base-font-family: "Lato", var(--sys-font-family), var(--zh-font-family), sans-serif;
+    --base-font-family: "Space Mono", "Segoe UI", var(--sys-font-family), var(--zh-font-family), sans-serif;
     --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
 }
 
