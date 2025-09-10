@@ -176,29 +176,23 @@
             text-align: end;
         }
 
-        svg {
-            stroke: currentColor;
-            stroke-width: 1.33;
-            width: 20px;
-            height: 20px;
-        }
+        font-family: var(--base-font-family);
+        font-weight: bold;
+        text-transform: uppercase;
 
         a {
-            height: 100%;
-            display: inline-flex;
-            align-items: center;
             color: var(--body-text-color);
-            gap: var(--menu-icon-separation);
-        }
 
-        span {
-            flex: 1;
+            &:hover {
+                color: var(--accent-color);
+            }
         }
 
         &.current {
             a {
                 color: var(--accent-color);
                 font-weight: bold;
+                cursor: default;
             }
         }
 
@@ -229,7 +223,12 @@
     svg {
         width: 24px;
         height: 24px;
-        stroke: var(--body-text-color);
-        stroke-width: 1.33;
+        fill: var(--body-text-color);
+        opacity: 0.2;
+
+        &.icon-tabler {
+            fill: none;
+            stroke: var(--body-text-color);
+        }
     }
 }

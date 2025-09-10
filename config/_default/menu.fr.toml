@@ -1,7 +1,7 @@
 # Sidebar
 [[main]]
     name = "À propos"
-    pageRef = "/page/about"
+    pageRef = "/pages/about"
     weight = 10
     params.icon = "user"
 
@@ -31,7 +31,7 @@
 
 [[main]]
     name = "Search"
-    pageRef = "/page/search"
+    pageRef = "/pages/search"
     weight = 50
     params.icon = "search"
 

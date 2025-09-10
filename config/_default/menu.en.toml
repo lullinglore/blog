@@ -1,7 +1,7 @@
 # Sidebar
 [[main]]
     name = "About"
-    pageRef = "/page/about" #Path to page in project not in final website
+    pageRef = "/pages/about" #Path to page in project not in final website
     weight = 10
     params.icon = "user"
 
@@ -31,25 +31,25 @@
 
 [[main]]
     name = "Search"
-    pageRef = "/page/search"
+    pageRef = "/pages/search"
     weight = 50
     params.icon = "search"
 
 # Social links
-[[social]]
-    identifier = "tumblr"
-    name = "Tumblr"
-    url = "https://lullinglore.tumblr.com/about"
-    params.icon = "social-tumblr"
+#[[social]]
+#    identifier = "tumblr"
+#    name = "Tumblr"
+#    url = "https://lullinglore.tumblr.com/about"
+#    params.icon = "social-tumblr"
 
-[[social]]
-    identifier = "gamejolt"
-    name = "Game Jolt"
-    url = "https://gamejolt.com/@lullinglore"
-    params.icon = "link"
+#[[social]]
+#    identifier = "gamejolt"
+#    name = "Game Jolt"
+#    url = "https://gamejolt.com/@lullinglore"
+#    params.icon = "link"
 
-[[social]]
-    identifier = "youtube"
-    name = "YouTube"
-    url = "https://youtube.com/@lullinglore"
-    params.icon = "social-yt"
+#[[social]]
+#    identifier = "youtube"
+#    name = "YouTube"
+#    url = "https://youtube.com/@lullinglore"
+#    params.icon = "social-yt"

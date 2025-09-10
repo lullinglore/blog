@@ -56,7 +56,7 @@ defaultContentLanguage = "en"
 
 # PERMALINKS
 [permalinks]
-  page = "/:slug/"
+  pages = "/:slug/"
 
   blog = "/entry/:year/:slug/"
   artblog = "/entry/:year/art-:slug/"
