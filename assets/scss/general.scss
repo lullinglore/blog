@@ -5,7 +5,6 @@
 .box {
     &-big {
         width: 100%;
-        @include bounce;
     }
 }
 

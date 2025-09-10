@@ -1,4 +1,5 @@
 .article-page {
+
     &.hide-sidebar-sm .left-sidebar {
         display: none;
 
@@ -12,6 +13,7 @@
         border-radius: var(--card-border-radius);
         // box-shadow: var(--shadow-l1);
         overflow: hidden;
+        @include fadeInUp();
 
         .article-header {
             .article-image {

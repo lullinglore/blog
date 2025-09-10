@@ -1,0 +1,9 @@
+// Basic transitions for eg. hover effects
+
+@mixin transition($property: all, $duration: 0.4s, $timingFunc: ease, $delay: 0s) {
+    -webkit-transition: $property $duration $timingFunc $delay;
+       -moz-transition: $property $duration $timingFunc $delay;
+        -ms-transition: $property $duration $timingFunc $delay;
+         -o-transition: $property $duration $timingFunc $delay;
+            transition: $property $duration $timingFunc $delay;
+}

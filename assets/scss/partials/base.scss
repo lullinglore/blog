@@ -40,7 +40,8 @@ body {
 a {
     text-decoration: none;
     color: var(--accent-color);
-
+    @include transition();
+    
     &:hover {
         color: var(--accent-color-darker);
     }
@@ -54,6 +55,7 @@ a {
         }
     }
 }
+
 
 .section-title {
     text-transform: uppercase;

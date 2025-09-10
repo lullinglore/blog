@@ -1,5 +1,31 @@
-<!-- Shortcode to invoke icon partial from content. -->
-{{- with .Get 0 -}}
-    {{- $icon := . -}}
-    <span class="icon">{{ partial "helper/icon" $icon }}</span>
-{{- end -}}
+{{/* Shortcode to invoke icon partial from content.
+    Syntax: {{< icon [name: file name] [color: hex | css variable] [size: number] >}}
+    Example: {{< icon globe "--accent-color" 48 >}}
+*/}}
+
+{{ $icon := false }}{{ $color := false }}{{ $size := false }}
+
+{{ with .Get 0 }}{{ $icon = . }}{{ end }}
+{{ with .Get 2 }}{{ $size = . }}{{ end }}
+
+{{ with .Get 1 }} <!-- Color can be either a hex or a css variable. Use anything else to omit -->
+    {{ if hasPrefix . "#"}}
+        {{ $color = . }}
+    {{ else if hasPrefix . "--"}}
+        {{ $color = printf "var(%s)" . }}
+    {{ end }}
+{{ end }}
+
+
+{{ with $icon }}
+    <span class="icon" style="{{- with $color -}} color: {{- . | safeCSS -}}; fill: {{- . | safeCSS -}}; {{- end -}}">
+    {{ $svg := partial "helper/icon" $icon}}
+    {{- with $size -}}
+        {{ $height := printf "height=\"%d\"" . }}
+        {{ $width := printf "width=\"%d\"" . }}
+        {{ $svg = replace $svg "height=\"24\"" $height | safeHTML }}
+        {{ $svg = replace $svg "width=\"24\"" $width | safeHTML }}
+    {{- end -}}
+    {{ $svg | safeHTML }}
+    </span>
+{{ end }}
