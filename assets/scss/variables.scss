@@ -34,6 +34,15 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     src: url("/fonts/space-mono.bolditalic.woff2") format("woff2"), url("/fonts/space-mono.bolditalic.woff") format("woff");
 }
 
+
+@font-face {
+    font-family: "Vollkorn";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: local("Vollkorn Regular");
+}
+
 /*
 *   Global style
 */
@@ -47,7 +56,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --body-background: #f5f5fa;
 
     --accent-color: #A6A5CA;
-    --accent-color-darker: #2c3e50;
+    --accent-color-darker: #7e72a0;
     --accent-color-text: #fff;
     --body-text-color: #707070;
 
@@ -56,16 +65,16 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
     --section-separation: 40px;
 
-    --scrollbar-thumb: hsl(0, 0%, 85%);
+    --scrollbar-thumb: var(--accent-color);
     --scrollbar-track: var(--body-background);
 
     &[data-scheme="dark"] {
         --body-background: #303030;
         --accent-color: #A6A5CA;
-        --accent-color-darker: #bdc3c7;
+        --accent-color-darker: #cec1e6;
         --accent-color-text: #000;
         --body-text-color: rgba(255, 255, 255, 0.7);
-        --scrollbar-thumb: hsl(0, 0%, 40%);
+        --scrollbar-thumb: var(--accent-color);
         --scrollbar-track: var(--body-background);
     }
 }
@@ -74,10 +83,11 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Global font family
 */
 :root {
-    --sys-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI";
+    --sys-font-family: -apple-system, BlinkMacSystemFont;
     --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
 
-    --base-font-family: "Space Mono", "Segoe UI", var(--sys-font-family), var(--zh-font-family), sans-serif;
+    --display-font-family: "Vollkorn", var(--sys-font-family), serif;
+    --base-font-family: "Space Mono", Consolas, var(--zh-font-family), monospace;
     --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
 }
 
@@ -126,13 +136,13 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 */
 :root {
     --article-font-family: var(--base-font-family);
-    --article-font-size: 1.6rem;
+    --article-font-size: 1.4rem;
 
     @include respond(md) {
-        --article-font-size: 1.7rem;
+        --article-font-size: 1.5rem;
     }
 
-    --article-line-height: 1.85;
+    --article-line-height: 1.5;
 }
 
 /*

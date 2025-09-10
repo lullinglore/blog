@@ -1,0 +1,30 @@
+/*
+*   Page builder classes
+*/
+// Boxes
+.box {
+    &-big {
+        width: 100%;
+        @include bounce;
+    }
+}
+
+// Text customization
+.text {
+    &-small {
+        font-size: calc(var(--article-font-size) * 0.9);
+    }
+    &-smaller {
+        font-size: calc(var(--article-font-size) * 0.75);
+    }
+    &-big {
+        font-size: calc(var(--article-font-size) * 1.1);
+    }
+    &-bigger {
+        font-size: calc(var(--article-font-size) * 1.25);
+    }
+
+    &-center {
+        text-align: center;
+    }
+}

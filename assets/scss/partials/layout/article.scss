@@ -8,9 +8,9 @@
     }
 
     .main-article {
-        background: var(--card-background);
+        background: transparent;
         border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
+        // box-shadow: var(--shadow-l1);
         overflow: hidden;
 
         .article-header {
@@ -551,8 +551,6 @@
             transform: translateY(-3px);
         }
     }
-
-    .callout {}
 
     .twitter-tweet {
         color: var(--card-text-color-main);

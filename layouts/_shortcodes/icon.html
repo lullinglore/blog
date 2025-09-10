@@ -1,0 +1,5 @@
+<!-- Shortcode to invoke icon partial from content. -->
+{{- with .Get 0 -}}
+    {{- $icon := . -}}
+    <span class="icon">{{ partial "helper/icon" $icon }}</span>
+{{- end -}}
