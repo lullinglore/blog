@@ -129,7 +129,7 @@
 /* Menu style */
 #main-menu {
     list-style: none;
-    overflow-y: auto;
+    overflow-y: visible;
     flex-grow: 1;
     font-size: 1.4rem;
     background-color: var(--card-background);
@@ -193,6 +193,8 @@
                 color: var(--accent-color);
                 font-weight: bold;
                 cursor: default;
+                position: relative;
+                left: 10px;
             }
         }
 

@@ -1,10 +1,40 @@
 /*
 *   Page builder classes
 */
+// Flex
+.flex {
+    &-row {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        
+        @include respond(lg) {
+            // Only display rows if screen is large enough.
+            flex-direction: row;
+            gap: 14px;
+        }
+    }
+}
+
 // Boxes
 .box {
-    &-big {
-        width: 100%;
+    &-big, &-medium, &-small {
+        background: var(--card-background);
+        border-radius: var(--card-border-radius);
+        padding: 14px 16px;
+        margin-bottom: 14px;
+
+        align-content: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    &-medium {
+        flex-grow: 2;
+        min-width: calc((100% / 3) * 2);
+    }
+    &-small {
+        flex-grow: 1;
     }
 }
 
@@ -26,4 +56,33 @@
     &-center {
         text-align: center;
     }
+}
+
+// Tags
+.tags {
+    display: flex;
+    flex-flow: row wrap;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+
+    span {
+        background-color: var(--accent-color);
+        border-radius: var(--box-border-radius);
+        padding: 2px 6px;
+        text-align: center;
+
+        @include transition();
+
+        &:hover {
+            cursor: default;
+            font-size: larger;
+        }
+    }
+}
+
+// Misc
+.transparent {
+    background-color: transparent;
 }
