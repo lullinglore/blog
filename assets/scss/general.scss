@@ -113,6 +113,24 @@
     text-align: end;
 }
 
+.icon-table {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 14px;
+    margin: 12px 0;
+
+    &:not(:first-child) {
+        margin-top: 20px;
+    }
+
+    svg {
+        $size: 22px;
+        height: $size;
+        width: $size;
+    }
+}
+
 // Misc
 .transparent {
     background-color: transparent;

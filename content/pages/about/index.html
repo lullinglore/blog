@@ -4,7 +4,7 @@ title: "About"
 
 <!-- HEADING -->
 <div class="box-big transparent noshadow text-center text-big text-bold">
-    {{< icon globe "--accent-color" 56 >}}
+    {{< icon globe --accent-color 56 >}}
     <p>I make games.</p>
     <p>But really that's just an excuse to blow my mind at building a world and then spend whole afternoons crying at tragic stories happening inside.</p>
 </div>
@@ -44,33 +44,18 @@ title: "About"
 <div class="flex-row">
     <!-- BOX 4 - CONTENT DESC -->
     <div class="box-medium">
-        <table>
-        
-        <tr>
-            <td><span class="bx bxs-paint-roll"></span></td>
-            <td>
-                here you'll find illustrations, visuals/posts about my world and project behind-the-scenes/progress logs
-            </td>
-        </tr>
-        
-        <tr></tr>
-        
-        <tr>
-            <td><span class="bx bxs-joystick"></span></td>
-            <td>
-                projects include narrative animated games and other interactive media taking place in my world
-            </td>
-        </tr>
-            
-        <tr></tr>
-        
-        <tr>
-            <td><span class="bx bxs-planet"></span></td>
-            <td>
-                my world features space-fantasy concepts, gray and complex characters, and ruthless stories stirring emotions
-            </td>
-        </tr>
-        </table>
+        <div class="icon-table">
+            {{< icon paintroll --accent-color >}}
+            <span>here you'll find illustrations, visuals/posts about my world and project behind-the-scenes/progress logs</span>
+        </div>
+        <div class="icon-table">
+            {{< icon joystick --accent-color >}}
+            <span>projects include narrative animated games and other interactive media taking place in my world</span>
+        </div>
+        <div class="icon-table">
+            {{< icon planet --accent-color >}}
+            <span>my world features space-fantasy concepts, gray and complex characters, and ruthless stories stirring emotions</span>
+        </div>
     </div>
     
     <!-- BOX 5 - DRAWING 1 -->
@@ -82,73 +67,53 @@ title: "About"
 <div class="flex-row">
     <!-- BOX 6 - STATS -->
     <div class="box-small">
-        <div class="con">
-            <p></p>
-            <p><h3>World's Cosmology</h3>
-            <div class="hp"><div class="bar one"></div></div></p>
-            <br>
-            
-            <p><h3>World's Geology</h3>
-            <div class="hp"><div class="bar two"></div></div></p>
-            <br>
-            
-            <p><h3>Project Circus Prototype</h3>
-            <div class="hp"><div class="bar three"></div></div></p>
-            <br>
-            
-            <p><h3>Project Circus' Story</h3>
-            <div class="hp"><div class="bar four"></div></div></p>
-    
-        </div>
+        <p>World's Cosmology</p>
+        <div class="hp"><div class="bar one"></div></div>
+        <br>
+        
+        <p>World's Geology</p>
+        <div class="hp"><div class="bar two"></div></div>
+        <br>
+        
+        <p>Project Circus Prototype</p>
+        <div class="hp"><div class="bar three"></div></div>
+        <br>
+        
+        <p>Project Circus' Story</p>
+        <div class="hp"><div class="bar four"></div></div>
     </div>
     
     <!-- BOX 7 - LIKES DISLIKES -->
     <div class="box-small">
-        <div class="con">
-            <table>
-            <tr>
-                <td><span class="bx bxs-like"></span></td>
-                <td>
-                intense experiences, deep discussions, interconnected systems
-                </td>
-            </tr>
-            <tr>
-                <td><span class="bx bxs-dislike"></span></td>
-                <td>
-                being disorganized, things that aren't pretty, society
-                </td>
-            </tr>
-            <tr></tr>
-            </table>
-    
-            <div class="palette flex justify">
-                <div class="color one"></div>
-                <div class="color two"></div>
-                <div class="color three"></div>
-            </div>
+        <div class="icon-table">
+            {{< icon like --accent-color >}}
+            <span>intense experiences, deep discussions, interconnected systems</span>
+        </div>
+        <div class="icon-table">
+            {{< icon dislike --accent-color >}}
+            <span>being disorganized, things that aren't pretty, societal norms</span>
+        </div>
+
+        <div class="palette flex justify">
+            <div class="color one"></div>
+            <div class="color two"></div>
+            <div class="color three"></div>
         </div>
     </div>
     
     <!-- BOX 8 - CURRENTLY -->
     <div class="currently box-small">
-        <div class="con">
-            <table>
-    
-                <tr>
-                    <td><span class="bx bxs-crop"></span></td>
-                    <td>Currently working on <strong>my first narrative game</strong></td>
-                </tr>
-                
-                <tr>
-                    <td><span class="bx bxs-game"></span></td>
-                    <td>Currently playing <strong>Hollow Knight • Mutazione</strong></td>
-                </tr>
-    
-                <tr>
-                    <td><span class="bx bxs-book-open"></span></td>
-                    <td>Currently reading <strong>a ton of webtoons</strong></td>
-                </tr>
-            </table>
+        <div class="icon-table">
+            {{< icon crop --accent-color >}}
+            <span>Currently working on <strong>my first narrative game</strong></span>
+        </div>
+        <div class="icon-table">
+            {{< icon pacman --accent-color >}}
+            <span>Currently playing <strong>Hollow Knight</strong></span>
+        </div>
+        <div class="icon-table">
+            {{< icon book-open --accent-color >}}
+            <span>Currently reading <strong>a ton of webtoons</strong></span>
         </div>
     </div>
 </div>
@@ -157,7 +122,7 @@ title: "About"
     <!-- BOX 9 - DRAWING 2 -->
     <div class="box-small">
         <div class="con">
-            I need to draw something to put in this box (╯°□°）╯
+            I need to draw something else to also put in this box (╯°□°）╯
         </div>
     </div>
     
@@ -174,9 +139,29 @@ title: "About"
 </div>
 
 <!-- BOX 11 - LINKS -->
-<div class="box-big">
-    <div class="con">
-        Links
+<div class="box-big text-center">
+    LINKS<br>@lullinglore everywhere!
+    <br><br>
+    <div class="link-box">
+        MAIN: 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Ko-fi</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Tumblr</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Game Jolt</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">YouTube</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">itch.io</a>
+        
+        <br>ACTIVE: 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Pinterest</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Pixiv</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Newgrounds</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">DeviantArt</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Mastodon</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Bluesky</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">X</a>
+        
+        <br>INACTIVE (for now): 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Twitch</a> | 
+        <a href="https://lullinglore.tumblr.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
 </div>
 
