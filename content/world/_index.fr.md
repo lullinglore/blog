@@ -1,4 +1,0 @@
----
-title: 'Purpleverse'
-url: 'monde'
----

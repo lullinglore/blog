@@ -6,7 +6,7 @@
     params.icon = "user"
 
 [[main]]
-    name = "Purpleverse"
+    name = "Orrion"
     pageRef = "/world"
     weight = 20
     params.icon = "infinity"
@@ -29,11 +29,11 @@
     weight = 40
     params.icon = "archives"
 
-[[main]]
-    name = "Search"
-    pageRef = "/pages/search"
-    weight = 50
-    params.icon = "search"
+#[[main]]
+#    name = "Search"
+#    pageRef = "/pages/search"
+#    weight = 50
+#    params.icon = "search"
 
 # Social links
 #[[social]]

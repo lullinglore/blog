@@ -28,6 +28,7 @@
         align-content: center;
         justify-content: center;
         overflow: hidden;
+        width: 100%;
 
         color: var(--page-text-color);
     }
@@ -39,6 +40,14 @@
     &-small {
         flex-grow: 1;
     }
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.noshadow {
+    box-shadow: none;
 }
 
 // Text customization
@@ -131,10 +140,61 @@
     }
 }
 
-// Misc
-.transparent {
-    background-color: transparent;
+.palette {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+
+    margin: 30px 20px 0 20px;
+
+    div {
+        $size: 50px;
+        width: $size;
+        height: $size;
+        border-radius: 100%;
+        vertical-align: middle;
+    }
 }
-.noshadow {
-    box-shadow: none;
+
+.button {
+    margin: 10px 14px;
+    display: flex;
+    justify-content: center;
+    
+    a {
+        background-color: var(--accent-color);
+        border-radius: var(--box-border-radius);
+        box-shadow: var(--shadow-l2);
+        padding: 4px 8px;
+    
+        color: var(--page-text-color-dark);
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    
+        @include transition();
+    
+        &:hover {
+            background-color: var(--accent-color-darker);
+        }
+    }
+}
+
+.progress-bar {
+    $bar-height: 14px;
+
+    background-color: var(--body-background);
+    border: var(--card-background) 2px solid;
+    border-radius: var(--box-border-radius);
+
+    height: $bar-height;
+    width: 100%;
+    margin-top: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    div {
+        height: $bar-height;
+        background-color: var(--accent-color);
+    }
 }

@@ -12,8 +12,8 @@ math = false #Set to true in frontmatter whenever needed
     type = "tag-cloud-topics"
   [[widgets.homepage]]
     type = "tag-cloud-categories"
-  [[widgets.homepage]]
-    type = "newsletter-sidebar"
+  #[[widgets.homepage]]
+  #  type = "newsletter-sidebar"
   [[widgets.homepage]]
     type = "kofi-button"
 
