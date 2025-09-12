@@ -28,6 +28,8 @@
         align-content: center;
         justify-content: center;
         overflow: hidden;
+
+        color: var(--page-text-color);
     }
 
     &-medium {
@@ -57,9 +59,13 @@
     &-center {
         text-align: center;
     }
+
+    &-bold {
+        font-weight: bold;
+    }
 }
 
-// Tags
+// Special blocks
 .tags {
     display: flex;
     flex-flow: row wrap;
@@ -75,6 +81,9 @@
         padding: 2px 6px;
         text-align: center;
 
+        font-weight: normal;
+        color: var(--page-text-color-dark);
+
         @include transition();
 
         &:hover {
@@ -82,6 +91,26 @@
             font-size: larger;
         }
     }
+}
+
+.quote {
+    display: inline-block;
+    margin: 8px 0;
+
+    font-family: var(--serif-font-family);
+    font-size: larger;
+    letter-spacing: 1px;
+    line-height: 2.6rem;
+    word-wrap: break-word;
+    
+    .icon {
+        margin: 0 2px;
+    }
+}
+
+.quote-src {
+    font-size: small;
+    text-align: end;
 }
 
 // Misc

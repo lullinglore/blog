@@ -34,13 +34,61 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     src: url("/fonts/space-mono.bolditalic.woff2") format("woff2"), url("/fonts/space-mono.bolditalic.woff") format("woff");
 }
 
+// BOULDERS BEACH SERIF
+@font-face {
+    font-family: "Boulders Beach";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/boulders-beach-serif.woff2") format("woff2"), url("/fonts/boulders-beach-serif.woff") format("woff");
+}
+
+// HUOVA
+@font-face {
+    font-family: "Huova";
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url("/fonts/huova.light.woff2") format("woff2"), url("/fonts/huova.light.woff") format("woff");
+}
+@font-face {
+    font-family: "Huova";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("/fonts/huova.regular.woff2") format("woff2"), url("/fonts/huova.regular.woff") format("woff");
+}
+@font-face {
+    font-family: "Huova";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("/fonts/huova.bold.woff2") format("woff2"), url("/fonts/huova.bold.woff") format("woff");
+}
+@font-face {
+    font-family: "Huova";
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url("/fonts/huova.black.woff2") format("woff2"), url("/fonts/huova.black.woff") format("woff");
+}
+
+// FAREWELL PRO
+@font-face {
+    font-family: "Farewell Pro";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/farewell-pro.woff2") format("woff2"), url("/fonts/farewell-pro.woff") format("woff");
+}
+
 
 @font-face {
     font-family: "Vollkorn";
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: local("Vollkorn Regular");
+    src: local("Vollkorn");
 }
 
 /*
@@ -83,10 +131,10 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 *   Global font family
 */
 :root {
-    --sys-font-family: -apple-system, BlinkMacSystemFont;
     --zh-font-family: "PingFang SC", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei";
 
-    --display-font-family: "Vollkorn", var(--sys-font-family), serif;
+    --display-font-family: "Huova", serif;
+    --serif-font-family: "Boulders Beach", serif;
     --base-font-family: "Space Mono", Consolas, var(--zh-font-family), monospace;
     --code-font-family: Menlo, Monaco, Consolas, "Courier New", var(--zh-font-family), monospace;
 }
@@ -98,7 +146,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     --card-background: #dddde9;
     --card-background-selected: #eaeaea;
 
-    --card-text-color-main: #000;
+    --card-text-color-main: #201d20;
     --card-text-color-secondary: #747474;
     --card-text-color-tertiary: #767676;
     --card-separator-color: rgba(218, 218, 218, 0.5);
@@ -131,7 +179,19 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 }
 
-/**
+/*
+*   Page style
+*/
+:root {
+    --page-text-color-dark: #423a42;
+    --page-text-color: #423a42;
+    
+    &[data-scheme="dark"] {
+        --page-text-color: #e6e0e6;
+    }
+}
+
+/*
 *   Article content font settings
 */
 :root {
