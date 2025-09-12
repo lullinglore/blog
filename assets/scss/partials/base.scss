@@ -39,11 +39,11 @@ body {
 
 a {
     text-decoration: none;
-    color: var(--accent-color);
+    color: var(--accent-color-darker);
     @include transition();
     
     &:hover {
-        color: var(--accent-color-darker);
+        color: var(--accent-color);
     }
 
     &.link {

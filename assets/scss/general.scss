@@ -21,6 +21,7 @@
     &-big, &-medium, &-small {
         background: var(--card-background);
         border-radius: var(--card-border-radius);
+        box-shadow: var(--shadow-l2);
         padding: 14px 16px;
         margin-bottom: 14px;
 
@@ -70,6 +71,7 @@
     span {
         background-color: var(--accent-color);
         border-radius: var(--box-border-radius);
+        box-shadow: var(--shadow-l1);
         padding: 2px 6px;
         text-align: center;
 
@@ -85,4 +87,7 @@
 // Misc
 .transparent {
     background-color: transparent;
+}
+.noshadow {
+    box-shadow: none;
 }
