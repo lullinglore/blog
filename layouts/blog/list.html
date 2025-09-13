@@ -1,8 +1,10 @@
 {{ define "main" }}
     <header>
         <div id="section-header">
-            <span class="icon">{{- partial "helper/icon" "telescope" -}}</span>
-            <h1>Lorewarden's Journal</h1>
+            {{ with .Params.sectionIcon }}
+                <span class="icon">{{- partial "helper/icon" . -}}</span>
+            {{ end }}
+            {{ with .Params.sectionTitle }}<h1>{{ . }}</h1>{{ end }}
         </div>
 
         {{- partial "article/components/content-with-wikilinks" . | safeHTML -}}

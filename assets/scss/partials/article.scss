@@ -4,7 +4,7 @@
     flex-direction: column;
     gap: var(--section-separation);
 
-    @include fadeInUp();
+    @include fadeInUp(1s, 1s, 0.4s);
 
     article {
         display: flex;
@@ -161,7 +161,7 @@
     height: 100%;
     flex-grow: 2;
 
-    @include fadeInUp();
+    @include fadeInUp(1s, 1s, 0.4s);
 
     @include respond(md) {
         --image-size: 60px;
@@ -218,6 +218,8 @@
 
 /* Tile style article list */
 .article-list--tile {
+    @include fadeInUp(1s, 1s, 0.4s);
+
     article {
         border-radius: var(--card-border-radius);
         overflow: hidden;
@@ -227,8 +229,6 @@
         box-shadow: var(--shadow-l1);
         transition: box-shadow 0.3s ease;
         background-color: var(--card-background);
-
-        @include fadeInUp();
 
         &:hover {
             box-shadow: var(--shadow-l2);
