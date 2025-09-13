@@ -31,7 +31,7 @@
         }
 
         @include respond(xl) {
-            max-width: 1436px;
+            max-width: 1536px;
             --left-sidebar-max-width: 15%;
             --right-sidebar-max-width: 25%;
         }
@@ -77,11 +77,12 @@
 main.main {
     order: -2;
     min-width: 0;
-    max-width: 100%;
+    max-width: var(--content-max-width);
     flex-grow: 1;
     display: flex;
     flex-direction: column;
     gap: var(--section-separation);
+
 
     @include respond(md) {
         padding-top: var(--main-top-padding);

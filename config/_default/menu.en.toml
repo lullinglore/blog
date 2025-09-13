@@ -3,31 +3,26 @@
     name = "About"
     pageRef = "/pages/about" #Path to page in project not in final website
     weight = 10
-    params.icon = "user"
 
 [[main]]
     name = "Orrion"
     pageRef = "/world"
     weight = 20
-    params.icon = "infinity"
 
 [[main]]
     name = "Projects"
     pageRef = "/projects"
     weight = 30
-    params.icon = "hash"
 
-[[main]]
-    name = "Artblog"
-    pageRef = "/artblog"
-    weight = 35
-    params.icon = "tag"
+#[[main]]
+#    name = "Artblog"
+#    pageRef = "/artblog"
+#    weight = 35
 
 [[main]]
     name = "Blog"
     pageRef = "/blog"
     weight = 40
-    params.icon = "archives"
 
 #[[main]]
 #    name = "Search"

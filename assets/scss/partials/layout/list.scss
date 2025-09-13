@@ -1,3 +1,18 @@
+
+.section-title {
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 10px;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--body-text-color);
+
+    a {
+        color: var(--body-text-color);
+    }
+}
+
 .section-card {
     border-radius: var(--card-border-radius);
     background-color: var(--card-background);
@@ -68,4 +83,45 @@
             }
         }
     }
+}
+
+#section-header {
+    margin-bottom: 40px;
+
+    color: var(--accent-color);
+    font-family: "Farewell Pro";
+    font-size: 2rem;
+    text-align: center;
+
+    .icon svg {
+        $size: 60px;
+        width: $size;
+        height: $size;
+    }
+
+    h1 {
+        margin-top: 0;
+    }
+}
+
+#section-tabs {
+    display: flex;
+    flex-flow: row nowrap;
+    color: var(--body-text-color);
+
+    a {
+        display: block;
+        width: 100%;
+        align-items: center;
+        justify-items: center;
+    
+        border-bottom: var(--card-background) 4px solid;
+        color: var(--body-text-color);
+        opacity: 0.8;
+    }
+    
+    .current {
+        border-bottom-color: var(--accent-color);
+    }
+
 }
