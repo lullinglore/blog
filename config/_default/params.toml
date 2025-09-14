@@ -6,22 +6,48 @@ math = false #Set to true in frontmatter whenever needed
 # WIDGETS
 [widgets]
 
+  # HOMEPAGE
   [[widgets.homepage]]
     type = "search"
   [[widgets.homepage]]
     type = "tag-cloud-topics"
   [[widgets.homepage]]
-    type = "tag-cloud-categories"
-  #[[widgets.homepage]]
-  #  type = "newsletter-sidebar"
+    type = "newsletter-sidebar"
   [[widgets.homepage]]
     type = "kofi-button"
 
-  [[widgets.page]]
+  # BLOG SECTION
+  [[widgets.blogSection]]
     type = "search"
-  [[widgets.page]]
-    type = "toc"
-  [[widgets.page]]
+  [[widgets.blogSection]]
+    type = "tag-cloud-topics"
+  [[widgets.blogSection]]
     type = "newsletter-sidebar"
-  [[widgets.page]]
+  [[widgets.blogSection]]
+    type = "kofi-button"
+
+  # BLOG PAGE
+  [[widgets.blogPage]]
+    type = "toc"
+  [[widgets.blogPage]]
+    type = "substack-post"
+  [[widgets.blogPage]]
+    type = "kofi-button"
+
+  # WORLD SECTION
+  [[widgets.worldSection]]
+    type = "search"
+  [[widgets.worldSection]]
+    type = "tag-cloud-categories"
+  [[widgets.worldSection]]
+    type = "newsletter-sidebar"
+  [[widgets.worldSection]]
+    type = "kofi-button"
+
+  # WORLD PAGE
+  [[widgets.worldPage]]
+    type = "toc"
+  [[widgets.worldPage]]
+    type = "newsletter-sidebar"
+  [[widgets.worldPage]]
     type = "kofi-button"

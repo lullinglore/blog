@@ -31,7 +31,7 @@
         }
 
         @include respond(xl) {
-            max-width: 1536px;
+            max-width: 1736px;
             --left-sidebar-max-width: 15%;
             --right-sidebar-max-width: 25%;
         }
@@ -74,6 +74,18 @@
     }
 }
 
+.main-container {
+    min-height: 100vh;
+    align-items: flex-start;
+    padding: 0 15px;
+    gap: var(--section-separation);
+    padding-top: var(--main-top-padding);
+    
+    @include respond(md) {
+        padding: 0 20px;
+    }
+}
+
 main.main {
     order: -2;
     min-width: 0;
@@ -86,17 +98,5 @@ main.main {
 
     @include respond(md) {
         padding-top: var(--main-top-padding);
-    }
-}
-
-.main-container {
-    min-height: 100vh;
-    align-items: flex-start;
-    padding: 0 15px;
-    gap: var(--section-separation);
-    padding-top: var(--main-top-padding);
-    
-    @include respond(md) {
-        padding: 0 20px;
     }
 }

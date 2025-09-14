@@ -1,6 +1,11 @@
-<div class="substack-post-embed">
-    <p lang="en">{{ .Get 0 }} by Lulling ✦</p>
-    <p>Snapshot from Orrion</p>
-    <a data-post-link href="https://lullinglore.substack.com/p/{{ .Get 1 }}">Read on Substack</a>
-</div>
-<script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+{{ if .Context.Param "substack" }}
+    <div class="substack-post-embed">
+        <p lang="en">{{ .Context.Title }} by Lulling ✦</p>
+        <p>Snapshot from Orrion</p>
+
+        {{ $link := split .Context.RelPermalink "/" | collections.Reverse }}
+        {{ $slug := index $link 1 }}
+        <a data-post-link href="https://lullinglore.substack.com/p/{{ $slug }}">Read on Substack</a>
+    </div>
+    <script async src="https://substack.com/embedjs/embed.js" charset="utf-8"></script>
+{{ end }}

@@ -7,7 +7,7 @@
     */}}
     {{- $HasWidgetNotTOC := false -}}
     {{- $TOCWidgetEnabled := false -}}
-    {{- range .Site.Params.widgets.page -}}
+    {{- range .Site.Params.widgets.blogPage -}}
         {{- if ne .type "toc" -}}
             {{ $HasWidgetNotTOC = true -}}
         {{- else -}}
@@ -42,5 +42,5 @@
 {{ end }}
 
 {{ define "right-sidebar" }}
-    {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "page") }}{{ end}}
+    {{ if .Scratch.Get "hasWidget" }}{{ partial "sidebar/right.html" (dict "Context" . "Scope" "blogPage") }}{{ end}}
 {{ end }}
