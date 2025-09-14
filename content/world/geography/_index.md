@@ -1,5 +1,5 @@
 ---
-title: geography
+title: Geography
 cascade:
     params:
         categories: geography

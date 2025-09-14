@@ -84,6 +84,12 @@
             }
         }
     }
+
+    &.blog .main-article {
+        max-width: 900px;
+        align-self: center;
+        text-align: justify;
+    }
 }
 
 .widget--toc {
@@ -234,9 +240,11 @@
     h5,
     h6 {
         margin-inline-start: calc((var(--card-padding)) * -1);
-        padding-inline-start: calc(var(--card-padding) - var(--heading-border-size));
-        border-inline-start: var(--heading-border-size) solid var(--accent-color);
-        position: relative;
+        padding-inline-start: var(--card-padding);
+        // border-inline-start: var(--heading-border-size) solid var(--accent-color);
+        // position: relative;
+
+        margin-top: 46px;
 
         font-family: var(--serif-font-family);
         letter-spacing: 1px;

@@ -1,5 +1,5 @@
 ---
-title: species
+title: Species
 cascade:
     params:
         categories: species

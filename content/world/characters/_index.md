@@ -1,5 +1,5 @@
 ---
-title: characters
+title: Characters
 cascade:
     params:
         categories: characters

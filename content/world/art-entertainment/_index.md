@@ -1,5 +1,5 @@
 ---
-title: art-entertainment
+title: Art & Entertainment
 cascade:
     params:
         categories: art-entertainment

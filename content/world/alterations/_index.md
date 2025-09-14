@@ -1,5 +1,5 @@
 ---
-title: alterations
+title: Alterations
 cascade:
     params:
         categories: alterations
