@@ -40,8 +40,14 @@ defaultContentLanguage = "en"
 [module]
 
   [[module.mounts]]
-      source = "D:/Documents/Vaults/Chaotic Creativity/Moons/Blog"
-      target = "content"
+      source = "D:/Documents/Vaults/Chaotic Creativity/Moons/Blog/blog"
+      target = "content/blog"
+  [[module.mounts]]
+      source = "D:/Documents/Vaults/Chaotic Creativity/Moons/Blog/artblog"
+      target = "content/blog/illustrations"
+  [[module.mounts]]
+      source = "D:/Documents/Vaults/Chaotic Creativity/Moons/Blog/world"
+      target = "content/world"
   [[module.mounts]]
       source = "content"
       target = "content"
