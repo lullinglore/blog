@@ -11,8 +11,8 @@ math = false #Set to true in frontmatter whenever needed
     type = "search"
   [[widgets.homepage]]
     type = "tag-cloud-topics"
-  [[widgets.homepage]]
-    type = "newsletter-sidebar"
+  #[[widgets.homepage]]
+  #  type = "newsletter-sidebar"
   [[widgets.homepage]]
     type = "kofi-button"
 
@@ -21,8 +21,8 @@ math = false #Set to true in frontmatter whenever needed
     type = "search"
   [[widgets.blogSection]]
     type = "tag-cloud-topics"
-  [[widgets.blogSection]]
-    type = "newsletter-sidebar"
+  #[[widgets.blogSection]]
+  #  type = "newsletter-sidebar"
   [[widgets.blogSection]]
     type = "kofi-button"
 
@@ -39,15 +39,15 @@ math = false #Set to true in frontmatter whenever needed
     type = "search"
   [[widgets.worldSection]]
     type = "tag-cloud-categories"
-  [[widgets.worldSection]]
-    type = "newsletter-sidebar"
+  #[[widgets.worldSection]]
+  #  type = "newsletter-sidebar"
   [[widgets.worldSection]]
     type = "kofi-button"
 
   # WORLD PAGE
   [[widgets.worldPage]]
     type = "toc"
-  [[widgets.worldPage]]
-    type = "newsletter-sidebar"
+  #[[widgets.worldPage]]
+  #  type = "newsletter-sidebar"
   [[widgets.worldPage]]
     type = "kofi-button"
