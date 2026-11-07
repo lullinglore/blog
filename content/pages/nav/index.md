@@ -13,6 +13,6 @@ Sitemap.
 
 Topics: [Update](/topics/update) / [Gamedev](/topics/gamedev) / [Worldbuilding](/topics/worldbuilding) / [Storytelling](/topics/storytelling) / [PKM](/topics/pkm) / [Gaming](/topics/gaming)
 
-Projects: [World](/projects/world) / [Project Purple](/projects/purple) / [Project Circus](/projects/circus) / [Project Lone](/projects/lone) / [Lyphuriaa](/projects/lyphuriaa)
+Projects: [World](/projects/world) / [Project Purple](/projects/purple) / [Project Circus](/projects/circus) / [Project Lone](/projects/lone) / [Hilalène](/projects/hilalene)
 
 Wiki categories: [Characters](/categories/characters)
